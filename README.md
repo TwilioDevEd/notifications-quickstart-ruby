@@ -9,7 +9,7 @@ Credential | Description
 Twilio Account SID | Your main Twilio account identifier - [find it on your dashboard](https://www.twilio.com/user/account/settings).
 Twilio APN Credential SID | Adds iOS notification ability to your app - [generate one here](https://www.twilio.com/user/account/ip-messaging/credentials). You'll need to provision your APN push credentials to generate this. See [this](https://www.twilio.com/docs/api/ip-messaging/guides/push-notifications-ios) guide on how to do that. (Optional)
 Twilio GCM Credential SID | Adds Android/GCM notification ability to your app - [generate one here](https://www.twilio.com/user/account/ip-messaging/credentials). You'll need to provision your GCM push credentials to generate this. See [this](https://www.twilio.com/docs/api/ip-messaging/guides/push-notifications-android) guide on how to do that. (Optional)
-Twilio Notification_Service SID | Use the create_service.rb script to generate this. Just run 'ruby create_service.rb' in your terminal, after you add the above configuration values to the `config.yml` file.
+Twilio Notification_Service SID | Use the create_service.rb script to generate this. Just run `ruby create_service.rb` in your terminal, after you add the above configuration values to the `config.yml` file.
 
 # Setting up the Ruby Application
 
