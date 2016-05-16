@@ -1,0 +1,8 @@
+      <tr>
+        <th><%=setting_name%></th>
+        <% if settings[setting_name] %>
+          <td class="good"><%=settings[setting_name]%></td>
+        <% else %>
+          <td class="unset">Not Configured</td>
+        <% end %>
+      </tr>

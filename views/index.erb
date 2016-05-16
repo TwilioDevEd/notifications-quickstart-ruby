@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Notifications Quickstart</title>
+    <link rel="stylesheet" type="text/css" href="css/notifications-quickstart.css"/>
+  </head>
+  <body>
+    <h1>Notifications Environment Setup</h1>
+    <p>The following system environment variables should be set:</p>
+    <table>
+      <%= erb :setting_partial, locals: {setting_name: 'TWILIO_NOTIFICATION_SERVICE_SID', settings: settings} %>
+      <%= erb :setting_partial, locals: {setting_name: 'TWILIO_APN_CREDENTIAL_SID', settings: settings} %>
+      <%= erb :setting_partial, locals: {setting_name: 'TWILIO_GCM_CREDENTIAL_SID', settings: settings} %>
+      <%= erb :setting_partial, locals: {setting_name: 'TWILIO_ACCOUNT_SID', settings: settings} %>
+      <tr>
+        <th>TWILIO_AUTH_TOKEN</th>
+        <% if settings['TWILIO_AUTH_TOKEN'] %>
+          <td class="good">Secret token configured</td>
+        <% else %>
+          <td class="unset">Not Configured</td>
+        <% end %>
+      </tr>
+    </table>
+  </body>
+</html>

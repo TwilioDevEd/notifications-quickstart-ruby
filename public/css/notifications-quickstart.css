@@ -1,0 +1,16 @@
+* { font-family: Helvetica; }
+table { border-collapse:collapse; }
+th {
+  margin:0;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  text-align:left;
+  padding:5px;
+}
+td {
+  margin:0;
+  border: 1px solid #ccc;
+  padding:5px;
+}
+.unset { color: red; font-weight: bold; }
+.good { color: green; font-weight: bold; }
