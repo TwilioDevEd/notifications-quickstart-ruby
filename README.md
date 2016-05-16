@@ -9,11 +9,11 @@ Credential | Description
 Twilio Account SID | Your main Twilio account identifier - [find it on your dashboard](https://www.twilio.com/user/account/settings).
 Twilio APN Credential SID | Adds iOS notification ability to your app - [generate one here](https://www.twilio.com/user/account/ip-messaging/credentials). You'll need to provision your APN push credentials to generate this. See [this](https://www.twilio.com/docs/api/ip-messaging/guides/push-notifications-ios) guide on how to do that. (Optional)
 Twilio GCM Credential SID | Adds Android/GCM notification ability to your app - [generate one here](https://www.twilio.com/user/account/ip-messaging/credentials). You'll need to provision your GCM push credentials to generate this. See [this](https://www.twilio.com/docs/api/ip-messaging/guides/push-notifications-android) guide on how to do that. (Optional)
-Twilio Notification_Service SID | Use the create_service.rb script to generate this. Just run 'ruby create_service.rb' in your terminal, after you add the above configuration values to the `config.rb` file.
+Twilio Notification_Service SID | Use the create_service.rb script to generate this. Just run 'ruby create_service.rb' in your terminal, after you add the above configuration values to the `config.yml` file.
 
 # Setting up the Ruby Application
 
-Edit the `config.rb` file with the four configuration parameters we gathered from above, plus your Twilio account's auth token.
+Edit the `config.yml` file with the four configuration parameters we gathered from above, plus your Twilio account's auth token.
 
 Next, we need to install our ruby gems:
 
@@ -27,7 +27,7 @@ Now we should be all set! Run the main web application using the `ruby index.rb`
 ruby index.rb
 ```
 
-Your application should now be running at [http://localhost:3000](http://localhost:3000). 
+Your application should now be running at [http://localhost:4567](http://localhost:4567). 
 
 # Usage
 
