@@ -1,6 +1,10 @@
 require 'sinatra'
 require 'twilio-ruby'
 require 'psych'
+require 'rack/contrib'
+
+# Parse JSON Body parts into params
+use ::Rack::PostBodyContentTypeParser
 
 settings = Psych.load(File.read('config.yml'))
 
@@ -11,6 +15,9 @@ get '/' do
 end
 
 post '/register' do
+
+  puts params
+
   # Authenticate with Twilio
   client = Twilio::REST::Client.new(
     settings['TWILIO_ACCOUNT_SID'],
@@ -26,15 +33,15 @@ post '/register' do
     binding = service.bindings.create(
       endpoint: params[:endpoint],
       identity: params[:identity],
-      binding_type: params[:BindingType],
-      address: params[:Address]
+      binding_type: params[:bindingType],
+      address: params[:address]
     )
     response = {
       message: 'Binding created!',
-      binding: binding
     }
     response.to_json
   rescue Twilio::REST::TwilioException => e
+    puts e
     status 500
     response = {
       message: "Failed to create binding: #{e.message}",
