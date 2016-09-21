@@ -26,5 +26,5 @@ else
   puts 'No GCM Credentials configured - add in config.yml, if available.'
 end
 
-service = client.notifications.v1.services.create(service_data)
+service = client.notify.v1.services.create(service_data)
 puts service
