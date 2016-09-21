@@ -25,7 +25,7 @@ post '/register' do
   )
 
   # Reference a valid notification service
-  service = client.notifications.v1.services(
+  service = client.notify.v1.services(
     settings['TWILIO_NOTIFICATION_SERVICE_SID']
   )
 
@@ -41,11 +41,11 @@ post '/register' do
     }
     response.to_json
   rescue Twilio::REST::TwilioException => e
-    puts e
+    puts e.message
     status 500
     response = {
       message: "Failed to create binding: #{e.message}",
-      error: e
+      error: e.message
     }
     response.to_json
   end
