@@ -12,7 +12,7 @@ client = Twilio::REST::Client.new(
 # Create a reference to the user notification service
 service_sid = settings['TWILIO_NOTIFICATION_SERVICE_SID']
 if service_sid
-  service = client.notifications.v1.services(service_sid)
+  service = client.notify.v1.services(service_sid)
   # Create a notification for a given identity
   identity = ARGV.first
   puts "Sending a notification to identity: #{identity}"
