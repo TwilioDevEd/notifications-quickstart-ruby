@@ -18,7 +18,7 @@ if service_sid
   puts "Sending a notification to identity: #{identity}"
   notification = service.notifications.create(
     identity: identity,
-    body: "Hello #{identity}!"
+    body: "Hello World!"
   )
   puts notification
 else
