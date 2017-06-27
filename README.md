@@ -27,13 +27,13 @@ Now we should be all set! Run the main web application using the `ruby index.rb`
 ruby index.rb
 ```
 
-Your application should now be running at [http://localhost:4567](http://localhost:4567). 
+Your application should now be running at [http://localhost:4567](http://localhost:4567).
 
 # Usage
 
 When your app receives a 'registration' in the form of a POST request to the /register endpoint from a mobile client, it will create a binding. A binding is the address Twilio gives your app installation. It lets our service know where to send notifications.  
 
-To send a notification to the client run the notify script 
+To send a notification to the client run the notify script
 
 ```bash
   ruby notify.rb IDENTITY_HERE
@@ -41,7 +41,7 @@ To send a notification to the client run the notify script
 
 The mobile client will receive a notification with the hardcoded 'Hello {IDENTITY}' message.
 
-That's it! Check out our REST API [docs](http://www.local.twilio.com/docs/api/notifications/rest/overview) for more information on Twilio Notifications.
+That's it! Check out our REST API [docs](http://www.twilio.com/docs/api/notifications/rest/) for more information on Twilio Notifications.
 
 ## License
 

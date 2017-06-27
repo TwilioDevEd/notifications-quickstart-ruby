@@ -40,7 +40,7 @@ post '/register' do
       message: 'Binding created!',
     }
     response.to_json
-  rescue Twilio::REST::TwilioException => e
+  rescue Twilio::REST::TwilioError => e
     puts e.message
     status 500
     response = {
